@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&family=Sono&display=swap');
+
+:root
+{
+--CorFundo: #2C3639;
+--CorTextos: #DCD7C9;
+--CorDestaque: #A27B5C;
+--CorHover: #3F4E4F;
+--CorTextoHover: #E90064; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    box-sizing: border-box; 
+    background: var(--CorFundo);
+    color: var(--CorTextos);
+}
+
+.titulo {
+    color: var(--CorDestaque);
+}
+
+h2{
+    font-weight: bold;
+}
+
+span{
+    color: var(--CorDestaque);
+    border: 1px solid var(--CorDestaque);
+    padding: 10px;
+}
+
+.cabecalho{
+padding: 3% 0% 0% 7%;
+
+}
+
+.cabecalho__menu{
+display: flex;
+gap: 30px;
+}
+
+.cabecalho__menu__Link
+{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--CorTextos);
+}
+
+.livePix{
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--CorDestaque);  
+}
+
+.conteudoInterno
+{
+    height: 70vh;
+    margin: 7% 17.4%;
+    display: flex;
+    /*flex-direction: row-reverse;*/
+    /*flex-direction: row | row-reverse | column | column-reverse;*/
+    /*justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;*/
+    align-items: center;
+    /* justify-content:space-between; */
+    justify-content:center;
+    gap: 20px;
+}
+
+.conteudoInterno__Secao{
+    width: 50%;
+    display: flex;
+    flex-direction:  column;
+    gap: 40px;
+}
+.conteudoInterno__Secao__Titulo
+{
+    /* font-size: 40px; */
+    font-size: 2,5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.conteudoInterno__Secao__paragrafo
+{
+    /* font-size: 30px; */
+    font-size: 1,25rem;
+    font-family: 'Sono', sans-serif;
+
+}
+.conteudoInterno__Secao__Links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+.conteudoInterno__Secao__Links__titulo{
+    font-size: 1,5625rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.conteudoInterno__Secao__Links_botao{
+    display: flex;
+    justify-content: center;
+    gap: 16px; 
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 3px solid var(--CorDestaque);
+    width: 70%;
+    font-size: 10px;
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 10px 0;
+    text-align:center;
+    border-radius: 5px;
+}
+
+.conteudoInterno__Secao__Links_botao:hover{
+background-color: var(--CorHover);
+color: var(--CorTextoHover);
+}
+
+.conteudoInterno_Imagem
+{
+height: 40%;
+
+}
+
+.livePix:hover
+{
+color: var(--CorTextoHover);
+}
+
+.myfooter
+{
+    background-color: var(--CorDestaque);
+    color: var(--CorTextos);
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    padding:  20px;
+    text-align:center;
+
+}
+
+.myfooter_Link{
+    text-decoration: none;
+    color: var(--CorTextos);
+}
+.myfooter_Link:hover{
+    color: var(--CorTextoHover);
+}
+
+@media (max-width: 1200px) {
+    
+    .cabecalho{
+        padding: 8% 0% 0% 0%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .conteudoInterno
+    {
+        margin: 3%;
+        flex-direction:column-reverse;
+    }
+
+    .conteudoInterno__Secao{
+        width: auto;
+
+    }
+
+    .conteudoInterno_Imagem {
+        height: 70%;
+        width: 50%;
+    }
+
+}
+</style>
+</head>
+<body>
+    <main class="conteudoInterno">
+        <section class="conteudoInterno__Secao">
+            <h1 class="conteudoInterno__Secao__Titulo"><strong class="titulo">Donate</strong></h1>
+            
+            <p class="conteudoInterno__Secao__paragrafo">
+            Eu sou o JADERLINK, o criador do Re4QuadExtremeEditor e de outras tool para o re4.
+            <br>
+            Caso você queira me ajudar financeiramente para eu continuar a produzir novas tools,
+            <br>
+            você pode me doar via LivePix: <a class="livePix" href="https://livepix.gg/jaderlink">https://livepix.gg/jaderlink</a>
+            </p>
+            
+            <div class="conteudoInterno__Secao__Links">
+                <h2 class="conteudoInterno__Secao__Links__titulo">Me ache em outros lugares:</h2>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://www.youtube.com/@JADERLINK">
+                    Youtube</a>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://jaderlink.blogspot.com/">
+                    Blog</a>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://github.com/JADERLINK">
+                    GitHub</a>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://jaderlink.github.io/">
+                     Minhas Tools</a>
+                     <a class="myfooter_Link" href="mailto:jaderlinkproject@gmail.com">
+                        Contato: jaderlinkproject@gmail.com</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
