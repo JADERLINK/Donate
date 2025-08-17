@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&family=Sono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sono&display=swap');
 
-:root
-{
---CorFundo: #2C3639;
---CorTextos: #DCD7C9;
---CorDestaque: #A27B5C;
---CorHover: #3F4E4F;
---CorTextoHover: #E90064; 
+:root {
+    --CorFundo: #445148;
+    --CorTextos: #DCD7C9;
+    --CorDestaqueTexto: #4D679E;
+    --CorDestaque: #6B8DDB;
+    --CorButton: #334468;
+    --CorHover: #E8EFFF;
+    --CorTextoHover: #E90064;
+    --JADERLINK: #00A5FF;
+    --Donate: #000000;
 }
 
 * {
@@ -22,202 +25,136 @@
     padding: 0;
 }
 
-body 
-{
-    box-sizing: border-box; 
+body {
+    box-sizing: border-box;
     background: var(--CorFundo);
     color: var(--CorTextos);
+    font-family: 'Sono', 'Open Sans', sans-serif;
 }
 
-.titulo {
-    color: var(--CorDestaque);
-}
-
-h2{
-    font-weight: bold;
-}
-
-span{
-    color: var(--CorDestaque);
-    border: 1px solid var(--CorDestaque);
-    padding: 10px;
-}
-
-.cabecalho{
-padding: 3% 0% 0% 7%;
-
-}
-
-.cabecalho__menu{
-display: flex;
-gap: 30px;
-}
-
-.cabecalho__menu__Link
-{
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    color: var(--CorTextos);
-}
-
-.livePix{
-    text-decoration: none;
-    font-size: 32px;
-    font-family: 'Open Sans', sans-serif;
-    color: var(--CorDestaque);  
-}
-
-.conteudoInterno
-{
-    height: 70vh;
-    margin: 7% 17.4%;
+.conteudoInterno {
+    height: 100%;
+    margin: 7% 7%;
     display: flex;
     /*flex-direction: row-reverse;*/
     /*flex-direction: row | row-reverse | column | column-reverse;*/
     /*justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;*/
     align-items: center;
     /* justify-content:space-between; */
-    justify-content:center;
+    justify-content: center;
     gap: 20px;
 }
 
-.conteudoInterno__Secao{
-    width: 50%;
+.conteudoInterno__Secao {
+    width: auto;
     display: flex;
-    flex-direction:  column;
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
 }
-.conteudoInterno__Secao__Titulo
-{
-    /* font-size: 40px; */
-    font-size: 2,5rem;
-    font-family: 'Open Sans', sans-serif;
-}
-.conteudoInterno__Secao__paragrafo
-{
-    /* font-size: 30px; */
-    font-size: 1,25rem;
-    font-family: 'Sono', sans-serif;
 
+.conteudoInterno__Secao__Titulo {
+    color: var(--Donate);
+    text-align: center;
+    font-size: 3.5rem;
+    text-shadow: 0 0 3px var(--CorTextos), 0 0 5px var(--CorTextos);
 }
-.conteudoInterno__Secao__Links{
+
+.conteudoInterno__Secao__paragrafo {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.20rem;
+}
+
+.JADERLINK {
+    color: var(--JADERLINK);
+    font-weight: bold;
+}
+
+
+.Italic {
+    font-style: italic;
+}
+
+.SpecialLink {
+    text-decoration: none;
+    font-size: 32px;
+    color: var(--CorDestaque);
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+.SpecialLink:hover {
+    color: var(--CorTextoHover);
+}
+
+.conteudoInterno__Secao__Links {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     justify-content: space-between;
 }
-.conteudoInterno__Secao__Links__titulo{
-    font-size: 1,5625rem;
-    font-family: 'Open Sans', sans-serif;
+
+.conteudoInterno__Secao__Links__titulo {
+    font-weight: bold;
+    font-size: 2rem;
 }
 
-.conteudoInterno__Secao__Links_botao{
+.conteudoInterno__Secao__Links_botao {
+    background-color: var(--CorButton);
     display: flex;
     justify-content: center;
-    gap: 16px; 
+    gap: 16px;
     align-items: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
     border: 3px solid var(--CorDestaque);
     width: 70%;
-    font-size: 10px;
-    font-family: 'Press Start 2P', sans-serif;
+    font-size: 20px;
+    font-family: 'Sono', sans-serif;
     padding: 10px 0;
-    text-align:center;
+    text-align: center;
     border-radius: 5px;
 }
 
-.conteudoInterno__Secao__Links_botao:hover{
-background-color: var(--CorHover);
-color: var(--CorTextoHover);
-}
-
-.conteudoInterno_Imagem
-{
-height: 40%;
-
-}
-
-.livePix:hover
-{
-color: var(--CorTextoHover);
-}
-
-.myfooter
-{
-    background-color: var(--CorDestaque);
-    color: var(--CorTextos);
-    font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    padding:  20px;
-    text-align:center;
-
-}
-
-.myfooter_Link{
-    text-decoration: none;
-    color: var(--CorTextos);
-}
-.myfooter_Link:hover{
+.conteudoInterno__Secao__Links_botao:hover {
+    background-color: var(--CorHover);
     color: var(--CorTextoHover);
 }
 
-@media (max-width: 1200px) {
-    
-    .cabecalho{
-        padding: 8% 0% 0% 0%;
-    }
-
-    .cabecalho__menu{
-        justify-content: center;
-    }
-
-    .conteudoInterno
-    {
-        margin: 3%;
-        flex-direction:column-reverse;
-    }
-
-    .conteudoInterno__Secao{
-        width: auto;
-
-    }
-
-    .conteudoInterno_Imagem {
-        height: 70%;
-        width: 50%;
-    }
-
+.Email_Link {
+    text-decoration: none;
+    color: var(--CorTextos);
 }
+
+.Email_Link:hover {
+    color: var(--CorTextoHover);
+}
+
 </style>
 </head>
 <body>
     <main class="conteudoInterno">
         <section class="conteudoInterno__Secao">
-            <h1 class="conteudoInterno__Secao__Titulo"><strong class="titulo">Donate</strong></h1>
-            
-            <p class="conteudoInterno__Secao__paragrafo">
-            Eu sou o JADERLINK, o criador do Re4QuadExtremeEditor e de outras tool para o re4.
-            <br>
-            Caso você queira me ajudar financeiramente para eu continuar a produzir novas tools,
-            <br>
-            você pode doar para mim via LivePix <a class="livePix" href="https://livepix.gg/jaderlink">https://livepix.gg/jaderlink</a>
-            </p>
-            
+            <h1 class="conteudoInterno__Secao__Titulo">Donate</h1>
+            <div class="conteudoInterno__Secao__paragrafo">
+                <p>I am <span class="JADERLINK">JADERLINK</span>, the creator of <span class="Italic">Re4QuadExtremeEditor</span> and other tools for RE4 OG.</p>
+                <p>If you did like to help me financially so I can continue producing new tools, </p>
+                <p>you can donate to me via Pix using LivePix:</p>
+                <a class="SpecialLink" href="https://livepix.gg/jaderlink" target="_blank">https://livepix.gg/jaderlink</a>
+                <p>Or via PayPal using Streamlabs:</p>
+                <a class="SpecialLink" href="https://streamlabs.com/jaderlink/tip" target="_blank">https://streamlabs.com/jaderlink/tip</a>
+                <p>You can also help me by promoting my YouTube channel:</p>
+                <a class="SpecialLink" href="https://www.youtube.com/@JADERLINK" target="_blank">https://www.youtube.com/@JADERLINK</a>
+            </div>
             <div class="conteudoInterno__Secao__Links">
-                <h2 class="conteudoInterno__Secao__Links__titulo">Me ache em outros lugares:</h2>
-                <a class="conteudoInterno__Secao__Links_botao" href="https://www.youtube.com/@JADERLINK">
-                    Youtube</a>
-                <a class="conteudoInterno__Secao__Links_botao" href="https://jaderlink.blogspot.com/">
-                    Blog</a>
-                <a class="conteudoInterno__Secao__Links_botao" href="https://github.com/JADERLINK">
-                    GitHub</a>
-                <a class="conteudoInterno__Secao__Links_botao" href="https://jaderlink.github.io/">
-                     Minhas Tools</a>
-                     <a class="myfooter_Link" href="mailto:jaderlinkproject@gmail.com">
-                        Contato: jaderlinkproject@gmail.com</a>
+                <h2 class="conteudoInterno__Secao__Links__titulo">Find me elsewhere:</h2>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://www.youtube.com/@JADERLINK" target="_blank">Youtube</a>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://jaderlink.blogspot.com/" target="_blank">Blog</a>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://github.com/JADERLINK" target="_blank">GitHub</a>
+                <a class="conteudoInterno__Secao__Links_botao" href="https://jaderlink.github.io/" target="_blank">My Tools</a>
+                <a class="Email_Link" href="mailto:jaderlinkproject@gmail.com">Contact: jaderlinkproject@gmail.com</a>
             </div>
         </section>
     </main>
